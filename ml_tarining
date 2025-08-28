@@ -1,0 +1,48 @@
+#include <iostream>
+#include <vector>
+#include <numeric>
+
+// Function to solve the coding challenge
+void solve() {
+    int R, C;
+
+    // Read the number of rows (R) and columns (C)
+    // The problem statement shows input is R, then C, followed by the matrix elements.
+    std::cin >> R >> C;
+
+    // Initialize variables to track the maximum count of '1's and the corresponding row index.
+    int maxOnes = -1; // Initialize with -1 to handle all-zero matrices
+    int maxRowIndex = -1;
+
+    // Loop through each row of the matrix
+    for (int i = 0; i < R; ++i) {
+        int currentRowOnes = 0; // Counter for '1's in the current row
+        
+        // Loop through each column of the current row
+        for (int j = 0; j < C; ++j) {
+            int element;
+            std::cin >> element;
+            // If the element is 1, increment the counter for the current row
+            if (element == 1) {
+                currentRowOnes++;
+            }
+        }
+
+        // Check if the current row has more '1's than the previous maximum
+        // Use '>=' to handle ties and take the last occurring row index, as shown in Test Case 2.
+        if (currentRowOnes >= maxOnes) {
+            maxOnes = currentRowOnes;
+            maxRowIndex = i;
+        }
+    }
+
+    // Print the row index with the maximum number of '1's
+    std::cout << maxRowIndex << std::endl;
+}
+
+// The main function where the program execution begins
+int main() {
+    // Call the solve function to run the core logic
+    solve();
+    return 0;
+}
