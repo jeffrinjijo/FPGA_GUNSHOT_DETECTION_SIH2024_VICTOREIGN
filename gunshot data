@@ -1,0 +1,25 @@
+# Dataset
+
+This project uses the **Gunshot Audio Dataset** available on Kaggle.
+
+Dataset Link:
+https://www.kaggle.com/datasets/emrahaydemr/gunshot-audio-dataset
+
+## Dataset Contents
+
+The dataset contains recordings from multiple firearm categories including:
+
+- AK-47
+- IMI Desert Eagle
+- AK-12
+- M16
+- M249
+- MG-42
+- MP5
+- Zastava M92
+
+These audio samples were used for feature extraction (MFCC), preprocessing, model training, and evaluation.
+
+## Download
+
+Download the dataset directly from Kaggle and extract it into:
